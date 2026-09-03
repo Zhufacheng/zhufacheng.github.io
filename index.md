@@ -1,5 +1,3 @@
-# zhufacheng
-
 **BMC Firmware Engineer**
 
 OpenBMC / Embedded Linux / Firmware

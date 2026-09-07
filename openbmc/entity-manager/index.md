@@ -155,7 +155,7 @@ systemd 起 (Type=dbus, BusName=xyz.openbmc_project.EntityManager)
 
 - **`main()`**：device tree 有 machine context 節點就 `populateFromDeviceTree()` 把 VPD 資料讀進 `MachineContext` 物件，抓 bus name `xyz.openbmc_project.MachineContext` 後進 loop。
 
-## vendor patches（patches/series 共 17 個）
+## vendor patches（現行 code 生效中的 8 個）
 
 | patch | 內容 |
 |---|---|
@@ -163,19 +163,10 @@ systemd 起 (Type=dbus, BusName=xyz.openbmc_project.EntityManager)
 | fru-device: Add MUX channel name to FRU objects | FRU 物件帶 MUX channel 名 |
 | Add Config-FRU Support | `eeprom.json` → `FruConfig` D-Bus 物件 |
 | Add logs to fwVersionIsSame | 版本 hash 判斷加 log |
-| Add condition for journal error/info handling | journal log 分級處理 |
-| Coverity fix | static analysis 修正 |
-| Converting journal log into dbus | log 轉 D-Bus |
 | Add new interface for partial preserve config support | `Preserve` interface：部分 config 可 runtime 改且保留 |
 | Adding MUX and Drives present in HSBP in json config | HSBP 設定加 MUX、disk presence |
-| Added Fix For SDR-Perceive-Configuration | SDR preserve 修正 |
-| Added Test-Fru Feature | `ENABLE_TEST_FRU` 測試用 FRU 物件 |
-| dynamic threshold configuration for SOLUM PSU | PSU 動態 threshold |
-| Change HSBP FRU address and add MUX mode configuration | HSBP FRU 地址、MUX mode 設定 |
+| Change HSBP FRU address and add MUX mode configuration | HSBP FRU 地址、MUX mode 設定（`MuxIdleMode`） |
 | entity-manager: fix crash from duplicated boards | 同名 board 直接忽略，不再 crash |
-| Added fix for SDR-Fail | SDR fail 修正 |
-| FruRescan-SDR-Fix | FRU rescan 對 SDR 的修正 |
-| Reverting community patch for Preserve config failure | 回退 community 的 preserve 失敗處理 |
 
 ## 幾個重點
 

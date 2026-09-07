@@ -1,4 +1,4 @@
-# entity-manager：重要 function 怎麼跑
+# entity-manager
 
 OpenBMC entity-manager 的 vendor fork，在 onetree 树的 vendor layer `recipes-phosphor/configuration/entity-manager/` 下（完整 source 在同目錄的 fork 目錄裡）。一個 recipe 建出三個 daemon：
 
